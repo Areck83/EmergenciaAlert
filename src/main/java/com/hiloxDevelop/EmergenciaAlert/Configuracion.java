@@ -50,6 +50,7 @@ public class Configuracion extends WsConfigurerAdapter {
         return wsdl;
     }
 
+    /* 
     @Bean
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
@@ -63,7 +64,7 @@ public class Configuracion extends WsConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }
+    }*/
 
     /*@Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){
