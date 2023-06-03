@@ -50,7 +50,6 @@ public class Configuracion extends WsConfigurerAdapter {
         return wsdl;
     }
 
-    /* 
     @Bean
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
@@ -58,10 +57,13 @@ public class Configuracion extends WsConfigurerAdapter {
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");
+        configuration.addAllowedHeader("Access-Control-Allow-Origin");
+        configuration.addAllowedHeader("Access-Control-Allow-Headers");
+        configuration.addAllowedHeader("Access-Control-Allow-Methods");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }*/
+    }
 
     /*@Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){

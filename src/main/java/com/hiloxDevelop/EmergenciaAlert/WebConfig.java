@@ -14,6 +14,6 @@ public class WebConfig implements WebMvcConfigurer{
             .allowedOriginPatterns("https://emergenciaalert-production.up.railway.app","*", "emergenciaalert-production.up.railway.app")
             .allowedMethods("GET", "POST", "PUT", "DELETE")
             .allowCredentials(true)
-            .allowedHeaders("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app");
+            .allowedHeaders("Access-Control-Allow-Origin", "*", "Access-Control-Allow-Headers", "Access-Control-Allow-Methods");
     }
 }
