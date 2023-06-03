@@ -50,11 +50,11 @@ public class Configuracion extends WsConfigurerAdapter {
         return wsdl;
     }
 
-    /* 
+    
     @Bean
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app"));
+        configuration.setAllowedOrigins(Arrays.asList("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app", "http://emergenciaalert-production.up.railway.app", "https://emergenciaalert-production.up.railway.app:80/ws", "https://emergenciaalert-production.up.railway.app:80/ws/emergencias.wsdl"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");
@@ -64,7 +64,7 @@ public class Configuracion extends WsConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }*/
+    }
 
     /*@Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){
