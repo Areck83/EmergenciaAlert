@@ -1,6 +1,9 @@
 package com.hiloxDevelop.EmergenciaAlert;
 
 import org.springframework.context.ApplicationContext;
+
+import java.util.Arrays;
+
 import org.apache.catalina.filters.CorsFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -8,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -45,6 +49,19 @@ public class Configuracion extends WsConfigurerAdapter {
         wsdl.setSchema(contactosSchema);
         return wsdl;
     }
+
+    /*
+    @Bean
+    CorsConfigurationSource configurationSource(){
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("emergenciaalert-production.up.railway.app"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        configuration.setAllowCredentials(true);
+        configuration.addAllowedHeader("*");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }*/
 
     /*@Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){
