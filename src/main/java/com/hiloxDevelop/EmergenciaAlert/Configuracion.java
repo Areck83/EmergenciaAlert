@@ -54,7 +54,7 @@ public class Configuracion extends WsConfigurerAdapter {
     @Bean
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://emergenciaalert-production.up.railway.app", "*"));
+        configuration.setAllowedOrigins(Arrays.asList("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");

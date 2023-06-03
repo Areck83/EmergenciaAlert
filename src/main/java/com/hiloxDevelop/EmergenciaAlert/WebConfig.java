@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer{
         registry.addMapping("/**")
             .allowedOriginPatterns("https://emergenciaalert-production.up.railway.app","*", "emergenciaalert-production.up.railway.app")
             .allowedMethods("GET", "POST", "PUT", "DELETE")
-            .allowCredentials(false)
-            .allowedHeaders("*");
+            .allowCredentials(true)
+            .allowedHeaders("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app");
     }
 }
