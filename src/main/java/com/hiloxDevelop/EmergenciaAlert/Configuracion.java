@@ -50,18 +50,18 @@ public class Configuracion extends WsConfigurerAdapter {
         return wsdl;
     }
 
-    /*
+    
     @Bean
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("emergenciaalert-production.up.railway.app"));
+        configuration.setAllowedOrigins(Arrays.asList("emergenciaalert-production.up.railway.app", "*"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }*/
+    }
 
     /*@Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){
