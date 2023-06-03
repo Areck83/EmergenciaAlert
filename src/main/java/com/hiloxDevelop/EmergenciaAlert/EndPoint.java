@@ -1,6 +1,7 @@
 package com.hiloxDevelop.EmergenciaAlert;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -22,6 +23,7 @@ public class EndPoint {
     @Autowired
     private IDirectorioEmergencias iDirectorioEmergencias;
 
+    @CrossOrigin(origins = "https://emergenciaalert-production.up.railway.app:80/")
     @PayloadRoot(localPart = "RegistrarContactoRequest", namespace = "https://t4is.hiloxDevelop/emergencias")
 
     @ResponsePayload
@@ -80,6 +82,7 @@ public class EndPoint {
         return c;
     }
 
+    @CrossOrigin(origins = "https://emergenciaalert-production.up.railway.app:80/")
     @PayloadRoot(localPart= "ObtenerContactosRequest", namespace = "https://t4is.hiloxDevelop/emergencias")
     @ResponsePayload
     public ObtenerContactosResponse ObtenerContactosResponse(){
