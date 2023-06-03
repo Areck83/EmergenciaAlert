@@ -55,7 +55,7 @@ public class Configuracion extends WsConfigurerAdapter {
     CorsConfigurationSource configurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList("https://emergenciaalert-production.up.railway.app", "*", "emergenciaalert-production.up.railway.app", "http://emergenciaalert-production.up.railway.app", "https://emergenciaalert-production.up.railway.app:80/ws", "https://emergenciaalert-production.up.railway.app:80/ws/emergencias.wsdl"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST"));
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");
         configuration.addAllowedHeader("Access-Control-Allow-Origin");
@@ -66,14 +66,14 @@ public class Configuracion extends WsConfigurerAdapter {
         return source;
     }
 
-    /*@Bean
+    @Bean
     public CommonsRequestLoggingFilter requestLoggingFilter(){
         CommonsRequestLoggingFilter loggingFilter = new CommonsRequestLoggingFilter();
         loggingFilter.setIncludeClientInfo(true);
         loggingFilter.setIncludeQueryString(true);
         loggingFilter.setIncludePayload(true);
         return loggingFilter;
-    }*/
+    }
 
     /*@Bean
     public FilterRegistrationBean<CorsFilter> corsFilterRegistration(){
